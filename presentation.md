@@ -7,6 +7,9 @@ on Tuesday 2020-03-10 at Galvanize (Platte)
 
 # BDD
 
+- Don't test code
+- Verify behavior
+
 ---
 
 # RSpec
