@@ -1,16 +1,29 @@
-<!-- slidenumbers: true -->
+slidenumbers: true
 <!-- footer: @phatblat - [Unit Testing with Quick](https://github.com/phatblat/UnitTestingWithQuick) -->
 
 # Unit Testing with [Quick](https://github.com/Quick/Quick)
 
 Presented at [Cocoaheads Denver](https://www.meetup.com/CocoaheadsDenver/)
-on Tuesday 2020-03-10 at Galvanize
+2020-03-10 at Galvanize
 
 ---
 
 # Slides & Example Project
 
 [phatblat/UnitTestingWithQuick](https://github.com/phatblat/UnitTestingWithQuick)
+
+---
+
+# @[phatblat](https://twitter.com/phatblat)
+
+- Ben Chatelain
+- Chief iOS Engineer
+- Kaiser Permanente
+- Manage suite of ~30 iOS & Android libs
+- open source: Quick, mas, Objective-Git
+- indie app dev 2008-2009
+
+![fit, right](Images/BChatelain.jpg)
 
 ---
 
@@ -87,6 +100,9 @@ describe("the thing") { /* closure */ }
 - Describes the thing being tested.
 - Groups examples.
 - Serves as a prefix for the actual test name.
+- Analogous to `XCTestCase`
+
+^ Essentially a suite of tests.
 
 ---
 
@@ -99,6 +115,8 @@ it("calculates an average score") { /* closure */ }
 - Describes an example behavior.
 - Contains assertions (expectations).
 - _One expectation per example._
+
+^ "one expectation" is my advice, but I feel very strongly about this
 
 ---
 
@@ -168,7 +186,6 @@ it("will be ignored") { code.compiles() == yes }
 —--
 
 # ✨ Focused Test Suites
-
 
 ```swift
 fdescribe("the thing") {
