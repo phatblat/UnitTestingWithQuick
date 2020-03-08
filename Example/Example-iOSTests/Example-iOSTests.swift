@@ -1,6 +1,6 @@
 //
-//  UnitTestingWithQuickTests.swift
-//  UnitTestingWithQuickTests
+//  Example-iOSTests.swift
+//  UnitTestingWithQuick
 //
 //  Created by Ben Chatelain on 3/8/20.
 //  Copyright © 2020 Ben Chatelain. All rights reserved.

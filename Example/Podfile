@@ -5,15 +5,15 @@
 
 platform :ios, '13.0'
 
-target 'UnitTestingWithQuick' do
+target 'Example-iOS' do
   use_frameworks!
 
-  target 'UnitTestingWithQuickTests' do
+  target 'Example-iOSTests' do
     inherit! :search_paths
     pod "Quick"
     pod "Nimble"
   end
 
-  target 'UnitTestingWithQuickUITests' do
+  target 'Example-iOSUITests' do
   end
 end

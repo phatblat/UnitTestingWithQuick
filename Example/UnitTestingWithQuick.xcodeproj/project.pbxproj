@@ -7,17 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		52C4556CB60C75B17C3419D7 /* Pods_UnitTestingWithQuick_UnitTestingWithQuickUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADC02E95AF2D546924C7145D /* Pods_UnitTestingWithQuick_UnitTestingWithQuickUITests.framework */; };
-		6513E1BB709D22829D4D016F /* Pods_UnitTestingWithQuick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40D40AC8777A7CA4ED076C1D /* Pods_UnitTestingWithQuick.framework */; };
-		F73EC68C772A133AB4E86648 /* Pods_UnitTestingWithQuickTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0989F9F05E5F5957D0B64277 /* Pods_UnitTestingWithQuickTests.framework */; };
+		6AF603987BC7F3420E32AAA4 /* Pods_Example_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B04148C8D8FED2418A5D2AF /* Pods_Example_iOS.framework */; };
+		8012211C6A8885F6F33822E1 /* Pods_Example_iOS_Example_iOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8086670946D501DBBAC69E16 /* Pods_Example_iOS_Example_iOSUITests.framework */; };
 		F8AE296B24152A2F007BCC0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AE296A24152A2F007BCC0A /* AppDelegate.swift */; };
 		F8AE296D24152A2F007BCC0A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AE296C24152A2F007BCC0A /* SceneDelegate.swift */; };
 		F8AE296F24152A2F007BCC0A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AE296E24152A2F007BCC0A /* ViewController.swift */; };
 		F8AE297224152A2F007BCC0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8AE297024152A2F007BCC0A /* Main.storyboard */; };
 		F8AE297424152A30007BCC0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8AE297324152A30007BCC0A /* Assets.xcassets */; };
 		F8AE297724152A30007BCC0A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8AE297524152A30007BCC0A /* LaunchScreen.storyboard */; };
-		F8AE298224152A30007BCC0A /* UnitTestingWithQuickTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AE298124152A30007BCC0A /* UnitTestingWithQuickTests.swift */; };
-		F8AE298D24152A30007BCC0A /* UnitTestingWithQuickUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AE298C24152A30007BCC0A /* UnitTestingWithQuickUITests.swift */; };
+		F8AE298224152A30007BCC0A /* Example-iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AE298124152A30007BCC0A /* Example-iOSTests.swift */; };
+		F8AE298D24152A30007BCC0A /* Example-iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AE298C24152A30007BCC0A /* Example-iOSUITests.swift */; };
+		FDBBC59A3BD7B209A8DCCD49 /* Pods_Example_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E59893D1367CF29D7B53746 /* Pods_Example_iOSTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,16 +38,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0989F9F05E5F5957D0B64277 /* Pods_UnitTestingWithQuickTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UnitTestingWithQuickTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		40D40AC8777A7CA4ED076C1D /* Pods_UnitTestingWithQuick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UnitTestingWithQuick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A263D299523B1AB37F4507E /* Pods-Example-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example-iOSTests.release.xcconfig"; path = "Target Support Files/Pods-Example-iOSTests/Pods-Example-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		68A4F90A8255F4E8ACB5AE80 /* Pods-UnitTestingWithQuick-UnitTestingWithQuickUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnitTestingWithQuick-UnitTestingWithQuickUITests.debug.xcconfig"; path = "Target Support Files/Pods-UnitTestingWithQuick-UnitTestingWithQuickUITests/Pods-UnitTestingWithQuick-UnitTestingWithQuickUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		6B04148C8D8FED2418A5D2AF /* Pods_Example_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7677910EE1D2FA7B15285AB6 /* Pods-Example-iOS-Example-iOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example-iOS-Example-iOSUITests.release.xcconfig"; path = "Target Support Files/Pods-Example-iOS-Example-iOSUITests/Pods-Example-iOS-Example-iOSUITests.release.xcconfig"; sourceTree = "<group>"; };
+		8086670946D501DBBAC69E16 /* Pods_Example_iOS_Example_iOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example_iOS_Example_iOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		809938341C5917234DBCE22C /* Pods-UnitTestingWithQuick.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnitTestingWithQuick.release.xcconfig"; path = "Target Support Files/Pods-UnitTestingWithQuick/Pods-UnitTestingWithQuick.release.xcconfig"; sourceTree = "<group>"; };
+		8125E57A8ADA415442675BE8 /* Pods-Example-iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example-iOSTests.debug.xcconfig"; path = "Target Support Files/Pods-Example-iOSTests/Pods-Example-iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		87F422F5501CCC3F4CF4EB90 /* Pods-Example-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example-iOS.release.xcconfig"; path = "Target Support Files/Pods-Example-iOS/Pods-Example-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		8E6A39D41236A6D71FFBF5F6 /* Pods-UnitTestingWithQuickTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnitTestingWithQuickTests.release.xcconfig"; path = "Target Support Files/Pods-UnitTestingWithQuickTests/Pods-UnitTestingWithQuickTests.release.xcconfig"; sourceTree = "<group>"; };
+		91630B9F896596D6F6724506 /* Pods-Example-iOS-Example-iOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example-iOS-Example-iOSUITests.debug.xcconfig"; path = "Target Support Files/Pods-Example-iOS-Example-iOSUITests/Pods-Example-iOS-Example-iOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9C6A4397EA301965F4580EF7 /* Pods-UnitTestingWithQuick-UnitTestingWithQuickUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnitTestingWithQuick-UnitTestingWithQuickUITests.release.xcconfig"; path = "Target Support Files/Pods-UnitTestingWithQuick-UnitTestingWithQuickUITests/Pods-UnitTestingWithQuick-UnitTestingWithQuickUITests.release.xcconfig"; sourceTree = "<group>"; };
+		9E59893D1367CF29D7B53746 /* Pods_Example_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2619FFB7B642017F483D2F7 /* Pods-UnitTestingWithQuickTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnitTestingWithQuickTests.debug.xcconfig"; path = "Target Support Files/Pods-UnitTestingWithQuickTests/Pods-UnitTestingWithQuickTests.debug.xcconfig"; sourceTree = "<group>"; };
-		ADC02E95AF2D546924C7145D /* Pods_UnitTestingWithQuick_UnitTestingWithQuickUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UnitTestingWithQuick_UnitTestingWithQuickUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA750A40676E158786057381 /* Pods-UnitTestingWithQuick.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnitTestingWithQuick.debug.xcconfig"; path = "Target Support Files/Pods-UnitTestingWithQuick/Pods-UnitTestingWithQuick.debug.xcconfig"; sourceTree = "<group>"; };
-		F8AE296724152A2F007BCC0A /* UnitTestingWithQuick.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnitTestingWithQuick.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF2F741BDDF7420C3E9F5AF0 /* Pods-Example-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example-iOS.debug.xcconfig"; path = "Target Support Files/Pods-Example-iOS/Pods-Example-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		F8AE296724152A2F007BCC0A /* Example-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Example-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8AE296A24152A2F007BCC0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8AE296C24152A2F007BCC0A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F8AE296E24152A2F007BCC0A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -55,11 +61,11 @@
 		F8AE297324152A30007BCC0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F8AE297624152A30007BCC0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F8AE297824152A30007BCC0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F8AE297D24152A30007BCC0A /* UnitTestingWithQuickTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTestingWithQuickTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F8AE298124152A30007BCC0A /* UnitTestingWithQuickTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTestingWithQuickTests.swift; sourceTree = "<group>"; };
+		F8AE297D24152A30007BCC0A /* Example-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Example-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8AE298124152A30007BCC0A /* Example-iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Example-iOSTests.swift"; sourceTree = "<group>"; };
 		F8AE298324152A30007BCC0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F8AE298824152A30007BCC0A /* UnitTestingWithQuickUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTestingWithQuickUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F8AE298C24152A30007BCC0A /* UnitTestingWithQuickUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTestingWithQuickUITests.swift; sourceTree = "<group>"; };
+		F8AE298824152A30007BCC0A /* Example-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Example-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8AE298C24152A30007BCC0A /* Example-iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Example-iOSUITests.swift"; sourceTree = "<group>"; };
 		F8AE298E24152A30007BCC0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -68,7 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6513E1BB709D22829D4D016F /* Pods_UnitTestingWithQuick.framework in Frameworks */,
+				6AF603987BC7F3420E32AAA4 /* Pods_Example_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,7 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F73EC68C772A133AB4E86648 /* Pods_UnitTestingWithQuickTests.framework in Frameworks */,
+				FDBBC59A3BD7B209A8DCCD49 /* Pods_Example_iOSTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,7 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52C4556CB60C75B17C3419D7 /* Pods_UnitTestingWithQuick_UnitTestingWithQuickUITests.framework in Frameworks */,
+				8012211C6A8885F6F33822E1 /* Pods_Example_iOS_Example_iOSUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,9 +100,9 @@
 		57C6149B12578D88A1B9B01A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				40D40AC8777A7CA4ED076C1D /* Pods_UnitTestingWithQuick.framework */,
-				ADC02E95AF2D546924C7145D /* Pods_UnitTestingWithQuick_UnitTestingWithQuickUITests.framework */,
-				0989F9F05E5F5957D0B64277 /* Pods_UnitTestingWithQuickTests.framework */,
+				6B04148C8D8FED2418A5D2AF /* Pods_Example_iOS.framework */,
+				8086670946D501DBBAC69E16 /* Pods_Example_iOS_Example_iOSUITests.framework */,
+				9E59893D1367CF29D7B53746 /* Pods_Example_iOSTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -110,6 +116,12 @@
 				9C6A4397EA301965F4580EF7 /* Pods-UnitTestingWithQuick-UnitTestingWithQuickUITests.release.xcconfig */,
 				A2619FFB7B642017F483D2F7 /* Pods-UnitTestingWithQuickTests.debug.xcconfig */,
 				8E6A39D41236A6D71FFBF5F6 /* Pods-UnitTestingWithQuickTests.release.xcconfig */,
+				EF2F741BDDF7420C3E9F5AF0 /* Pods-Example-iOS.debug.xcconfig */,
+				87F422F5501CCC3F4CF4EB90 /* Pods-Example-iOS.release.xcconfig */,
+				91630B9F896596D6F6724506 /* Pods-Example-iOS-Example-iOSUITests.debug.xcconfig */,
+				7677910EE1D2FA7B15285AB6 /* Pods-Example-iOS-Example-iOSUITests.release.xcconfig */,
+				8125E57A8ADA415442675BE8 /* Pods-Example-iOSTests.debug.xcconfig */,
+				0A263D299523B1AB37F4507E /* Pods-Example-iOSTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -117,9 +129,9 @@
 		F8AE295E24152A2F007BCC0A = {
 			isa = PBXGroup;
 			children = (
-				F8AE296924152A2F007BCC0A /* UnitTestingWithQuick */,
-				F8AE298024152A30007BCC0A /* UnitTestingWithQuickTests */,
-				F8AE298B24152A30007BCC0A /* UnitTestingWithQuickUITests */,
+				F8AE296924152A2F007BCC0A /* Example-iOS */,
+				F8AE298024152A30007BCC0A /* Example-iOSTests */,
+				F8AE298B24152A30007BCC0A /* Example-iOSUITests */,
 				F8AE296824152A2F007BCC0A /* Products */,
 				D23848B87FD2212695E8C62A /* Pods */,
 				57C6149B12578D88A1B9B01A /* Frameworks */,
@@ -129,14 +141,14 @@
 		F8AE296824152A2F007BCC0A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F8AE296724152A2F007BCC0A /* UnitTestingWithQuick.app */,
-				F8AE297D24152A30007BCC0A /* UnitTestingWithQuickTests.xctest */,
-				F8AE298824152A30007BCC0A /* UnitTestingWithQuickUITests.xctest */,
+				F8AE296724152A2F007BCC0A /* Example-iOS.app */,
+				F8AE297D24152A30007BCC0A /* Example-iOSTests.xctest */,
+				F8AE298824152A30007BCC0A /* Example-iOSUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F8AE296924152A2F007BCC0A /* UnitTestingWithQuick */ = {
+		F8AE296924152A2F007BCC0A /* Example-iOS */ = {
 			isa = PBXGroup;
 			children = (
 				F8AE296A24152A2F007BCC0A /* AppDelegate.swift */,
@@ -147,33 +159,33 @@
 				F8AE297524152A30007BCC0A /* LaunchScreen.storyboard */,
 				F8AE297824152A30007BCC0A /* Info.plist */,
 			);
-			path = UnitTestingWithQuick;
+			path = "Example-iOS";
 			sourceTree = "<group>";
 		};
-		F8AE298024152A30007BCC0A /* UnitTestingWithQuickTests */ = {
+		F8AE298024152A30007BCC0A /* Example-iOSTests */ = {
 			isa = PBXGroup;
 			children = (
-				F8AE298124152A30007BCC0A /* UnitTestingWithQuickTests.swift */,
+				F8AE298124152A30007BCC0A /* Example-iOSTests.swift */,
 				F8AE298324152A30007BCC0A /* Info.plist */,
 			);
-			path = UnitTestingWithQuickTests;
+			path = "Example-iOSTests";
 			sourceTree = "<group>";
 		};
-		F8AE298B24152A30007BCC0A /* UnitTestingWithQuickUITests */ = {
+		F8AE298B24152A30007BCC0A /* Example-iOSUITests */ = {
 			isa = PBXGroup;
 			children = (
-				F8AE298C24152A30007BCC0A /* UnitTestingWithQuickUITests.swift */,
+				F8AE298C24152A30007BCC0A /* Example-iOSUITests.swift */,
 				F8AE298E24152A30007BCC0A /* Info.plist */,
 			);
-			path = UnitTestingWithQuickUITests;
+			path = "Example-iOSUITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F8AE296624152A2F007BCC0A /* UnitTestingWithQuick */ = {
+		F8AE296624152A2F007BCC0A /* Example-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F8AE299124152A30007BCC0A /* Build configuration list for PBXNativeTarget "UnitTestingWithQuick" */;
+			buildConfigurationList = F8AE299124152A30007BCC0A /* Build configuration list for PBXNativeTarget "Example-iOS" */;
 			buildPhases = (
 				CD24F0C4C3F26C33E6EAC927 /* [CP] Check Pods Manifest.lock */,
 				F8AE296324152A2F007BCC0A /* Sources */,
@@ -184,14 +196,14 @@
 			);
 			dependencies = (
 			);
-			name = UnitTestingWithQuick;
+			name = "Example-iOS";
 			productName = UnitTestingWithQuickAndNimble;
-			productReference = F8AE296724152A2F007BCC0A /* UnitTestingWithQuick.app */;
+			productReference = F8AE296724152A2F007BCC0A /* Example-iOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F8AE297C24152A30007BCC0A /* UnitTestingWithQuickTests */ = {
+		F8AE297C24152A30007BCC0A /* Example-iOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F8AE299424152A30007BCC0A /* Build configuration list for PBXNativeTarget "UnitTestingWithQuickTests" */;
+			buildConfigurationList = F8AE299424152A30007BCC0A /* Build configuration list for PBXNativeTarget "Example-iOSTests" */;
 			buildPhases = (
 				3E8C48164C08CC392E61E5C5 /* [CP] Check Pods Manifest.lock */,
 				F8AE297924152A30007BCC0A /* Sources */,
@@ -204,14 +216,14 @@
 			dependencies = (
 				F8AE297F24152A30007BCC0A /* PBXTargetDependency */,
 			);
-			name = UnitTestingWithQuickTests;
+			name = "Example-iOSTests";
 			productName = UnitTestingWithQuickAndNimbleTests;
-			productReference = F8AE297D24152A30007BCC0A /* UnitTestingWithQuickTests.xctest */;
+			productReference = F8AE297D24152A30007BCC0A /* Example-iOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		F8AE298724152A30007BCC0A /* UnitTestingWithQuickUITests */ = {
+		F8AE298724152A30007BCC0A /* Example-iOSUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F8AE299724152A30007BCC0A /* Build configuration list for PBXNativeTarget "UnitTestingWithQuickUITests" */;
+			buildConfigurationList = F8AE299724152A30007BCC0A /* Build configuration list for PBXNativeTarget "Example-iOSUITests" */;
 			buildPhases = (
 				890453B6DAFF5795420107BF /* [CP] Check Pods Manifest.lock */,
 				F8AE298424152A30007BCC0A /* Sources */,
@@ -223,9 +235,9 @@
 			dependencies = (
 				F8AE298A24152A30007BCC0A /* PBXTargetDependency */,
 			);
-			name = UnitTestingWithQuickUITests;
+			name = "Example-iOSUITests";
 			productName = UnitTestingWithQuickAndNimbleUITests;
-			productReference = F8AE298824152A30007BCC0A /* UnitTestingWithQuickUITests.xctest */;
+			productReference = F8AE298824152A30007BCC0A /* Example-iOSUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -264,9 +276,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F8AE296624152A2F007BCC0A /* UnitTestingWithQuick */,
-				F8AE297C24152A30007BCC0A /* UnitTestingWithQuickTests */,
-				F8AE298724152A30007BCC0A /* UnitTestingWithQuickUITests */,
+				F8AE296624152A2F007BCC0A /* Example-iOS */,
+				F8AE297C24152A30007BCC0A /* Example-iOSTests */,
+				F8AE298724152A30007BCC0A /* Example-iOSUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -305,15 +317,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-UnitTestingWithQuickTests/Pods-UnitTestingWithQuickTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Example-iOSTests/Pods-Example-iOSTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-UnitTestingWithQuickTests/Pods-UnitTestingWithQuickTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Example-iOSTests/Pods-Example-iOSTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UnitTestingWithQuickTests/Pods-UnitTestingWithQuickTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Example-iOSTests/Pods-Example-iOSTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		3E8C48164C08CC392E61E5C5 /* [CP] Check Pods Manifest.lock */ = {
@@ -331,7 +343,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-UnitTestingWithQuickTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Example-iOSTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -353,7 +365,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-UnitTestingWithQuick-UnitTestingWithQuickUITests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Example-iOS-Example-iOSUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -375,7 +387,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-UnitTestingWithQuick-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Example-iOS-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -399,7 +411,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8AE298224152A30007BCC0A /* UnitTestingWithQuickTests.swift in Sources */,
+				F8AE298224152A30007BCC0A /* Example-iOSTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,7 +419,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8AE298D24152A30007BCC0A /* UnitTestingWithQuickUITests.swift in Sources */,
+				F8AE298D24152A30007BCC0A /* Example-iOSUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,12 +428,12 @@
 /* Begin PBXTargetDependency section */
 		F8AE297F24152A30007BCC0A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F8AE296624152A2F007BCC0A /* UnitTestingWithQuick */;
+			target = F8AE296624152A2F007BCC0A /* Example-iOS */;
 			targetProxy = F8AE297E24152A30007BCC0A /* PBXContainerItemProxy */;
 		};
 		F8AE298A24152A30007BCC0A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F8AE296624152A2F007BCC0A /* UnitTestingWithQuick */;
+			target = F8AE296624152A2F007BCC0A /* Example-iOS */;
 			targetProxy = F8AE298924152A30007BCC0A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -562,17 +574,17 @@
 		};
 		F8AE299224152A30007BCC0A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BA750A40676E158786057381 /* Pods-UnitTestingWithQuick.debug.xcconfig */;
+			baseConfigurationReference = EF2F741BDDF7420C3E9F5AF0 /* Pods-Example-iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZVHNFV8S8B;
-				INFOPLIST_FILE = UnitTestingWithQuick/Info.plist;
+				INFOPLIST_FILE = "Example-iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = at.phatbl.UnitTestingWithQuick;
+				PRODUCT_BUNDLE_IDENTIFIER = "at.phatbl.UnitTestingWithQuick.Example-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -581,17 +593,17 @@
 		};
 		F8AE299324152A30007BCC0A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 809938341C5917234DBCE22C /* Pods-UnitTestingWithQuick.release.xcconfig */;
+			baseConfigurationReference = 87F422F5501CCC3F4CF4EB90 /* Pods-Example-iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZVHNFV8S8B;
-				INFOPLIST_FILE = UnitTestingWithQuick/Info.plist;
+				INFOPLIST_FILE = "Example-iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = at.phatbl.UnitTestingWithQuick;
+				PRODUCT_BUNDLE_IDENTIFIER = "at.phatbl.UnitTestingWithQuick.Example-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -600,87 +612,87 @@
 		};
 		F8AE299524152A30007BCC0A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A2619FFB7B642017F483D2F7 /* Pods-UnitTestingWithQuickTests.debug.xcconfig */;
+			baseConfigurationReference = 8125E57A8ADA415442675BE8 /* Pods-Example-iOSTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZVHNFV8S8B;
-				INFOPLIST_FILE = UnitTestingWithQuickTests/Info.plist;
+				INFOPLIST_FILE = "Example-iOSTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = at.phatbl.UnitTestingWithQuickTests;
+				PRODUCT_BUNDLE_IDENTIFIER = "at.phatbl.UnitTestingWithQuick.Example-iOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UnitTestingWithQuick.app/UnitTestingWithQuick";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Example-iOS.app/Example-iOS";
 			};
 			name = Debug;
 		};
 		F8AE299624152A30007BCC0A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8E6A39D41236A6D71FFBF5F6 /* Pods-UnitTestingWithQuickTests.release.xcconfig */;
+			baseConfigurationReference = 0A263D299523B1AB37F4507E /* Pods-Example-iOSTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZVHNFV8S8B;
-				INFOPLIST_FILE = UnitTestingWithQuickTests/Info.plist;
+				INFOPLIST_FILE = "Example-iOSTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = at.phatbl.UnitTestingWithQuickTests;
+				PRODUCT_BUNDLE_IDENTIFIER = "at.phatbl.UnitTestingWithQuick.Example-iOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UnitTestingWithQuick.app/UnitTestingWithQuick";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Example-iOS.app/Example-iOS";
 			};
 			name = Release;
 		};
 		F8AE299824152A30007BCC0A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 68A4F90A8255F4E8ACB5AE80 /* Pods-UnitTestingWithQuick-UnitTestingWithQuickUITests.debug.xcconfig */;
+			baseConfigurationReference = 91630B9F896596D6F6724506 /* Pods-Example-iOS-Example-iOSUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZVHNFV8S8B;
-				INFOPLIST_FILE = UnitTestingWithQuickUITests/Info.plist;
+				INFOPLIST_FILE = "Example-iOSUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = at.phatbl.UnitTestingWithQuickUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = "at.phatbl.UnitTestingWithQuick.Example-iOSUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = UnitTestingWithQuick;
+				TEST_TARGET_NAME = "Example-iOS";
 			};
 			name = Debug;
 		};
 		F8AE299924152A30007BCC0A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9C6A4397EA301965F4580EF7 /* Pods-UnitTestingWithQuick-UnitTestingWithQuickUITests.release.xcconfig */;
+			baseConfigurationReference = 7677910EE1D2FA7B15285AB6 /* Pods-Example-iOS-Example-iOSUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZVHNFV8S8B;
-				INFOPLIST_FILE = UnitTestingWithQuickUITests/Info.plist;
+				INFOPLIST_FILE = "Example-iOSUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = at.phatbl.UnitTestingWithQuickUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = "at.phatbl.UnitTestingWithQuick.Example-iOSUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = UnitTestingWithQuick;
+				TEST_TARGET_NAME = "Example-iOS";
 			};
 			name = Release;
 		};
@@ -696,7 +708,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F8AE299124152A30007BCC0A /* Build configuration list for PBXNativeTarget "UnitTestingWithQuick" */ = {
+		F8AE299124152A30007BCC0A /* Build configuration list for PBXNativeTarget "Example-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F8AE299224152A30007BCC0A /* Debug */,
@@ -705,7 +717,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F8AE299424152A30007BCC0A /* Build configuration list for PBXNativeTarget "UnitTestingWithQuickTests" */ = {
+		F8AE299424152A30007BCC0A /* Build configuration list for PBXNativeTarget "Example-iOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F8AE299524152A30007BCC0A /* Debug */,
@@ -714,7 +726,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F8AE299724152A30007BCC0A /* Build configuration list for PBXNativeTarget "UnitTestingWithQuickUITests" */ = {
+		F8AE299724152A30007BCC0A /* Build configuration list for PBXNativeTarget "Example-iOSUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F8AE299824152A30007BCC0A /* Debug */,

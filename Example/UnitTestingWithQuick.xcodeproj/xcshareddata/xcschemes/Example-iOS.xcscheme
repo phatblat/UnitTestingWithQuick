@@ -15,8 +15,22 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F8AE296624152A2F007BCC0A"
-               BuildableName = "UnitTestingWithQuick.app"
-               BlueprintName = "UnitTestingWithQuick"
+               BuildableName = "Example-iOS.app"
+               BlueprintName = "Example-iOS"
+               ReferencedContainer = "container:UnitTestingWithQuick.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "NO"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F8AE298724152A30007BCC0A"
+               BuildableName = "Example-iOSUITests.xctest"
+               BlueprintName = "Example-iOSUITests"
                ReferencedContainer = "container:UnitTestingWithQuick.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -33,18 +47,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F8AE297C24152A30007BCC0A"
-               BuildableName = "UnitTestingWithQuickTests.xctest"
-               BlueprintName = "UnitTestingWithQuickTests"
-               ReferencedContainer = "container:UnitTestingWithQuick.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F8AE298724152A30007BCC0A"
-               BuildableName = "UnitTestingWithQuickUITests.xctest"
-               BlueprintName = "UnitTestingWithQuickUITests"
+               BuildableName = "Example-iOSTests.xctest"
+               BlueprintName = "Example-iOSTests"
                ReferencedContainer = "container:UnitTestingWithQuick.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -65,8 +69,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F8AE296624152A2F007BCC0A"
-            BuildableName = "UnitTestingWithQuick.app"
-            BlueprintName = "UnitTestingWithQuick"
+            BuildableName = "Example-iOS.app"
+            BlueprintName = "Example-iOS"
             ReferencedContainer = "container:UnitTestingWithQuick.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -82,8 +86,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F8AE296624152A2F007BCC0A"
-            BuildableName = "UnitTestingWithQuick.app"
-            BlueprintName = "UnitTestingWithQuick"
+            BuildableName = "Example-iOS.app"
+            BlueprintName = "Example-iOS"
             ReferencedContainer = "container:UnitTestingWithQuick.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
