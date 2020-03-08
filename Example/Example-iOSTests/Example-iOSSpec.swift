@@ -13,11 +13,15 @@ import Nimble
 class Example_iOSSpec: QuickSpec {
     override func spec() {
         describe("basic addition") {
-            it("to equal three") {
+            xit("to equal three") {
                 expect(1 + 1).to(equal(3))
                 // failed - expected to equal <3>, got <2>
 
                 expect(1 + 1).to(equal(3), description: "Make sure libKindergartenMath is loaded")
+            }
+
+            it("does not compile") {
+                //expect(1 + 1).to(equal("Squee!"))
             }
         }
     }

@@ -11,6 +11,8 @@ import XCTest
 
 class Example_iOSTests: XCTestCase {
 
+    var sharedState = 0
+
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
@@ -20,12 +22,16 @@ class Example_iOSTests: XCTestCase {
     }
 
     // This test is disabled in the Xcode scheme
-    func testExample() throws {    }
+    func testExample() throws {}
 
     // I prefer to disable tests in code
-    func DISABLED_testBasicArithmatic() throws {
+    func DONT_testBasicArithmatic() throws {
         XCTAssertEqual(1 + 1, 3)
         XCTAssertEqual(1 + 1, 3, "Make sure libKindergartenMath is loaded")
+    }
+
+    func testComparingDifferentTypes() throws {
+        XCTAssertEqual("Squee!", 1 + 1)
     }
 
     func testPerformanceExample() throws {

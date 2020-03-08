@@ -12,6 +12,8 @@
 		8012211C6A8885F6F33822E1 /* Pods_Example_iOS_Example_iOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8086670946D501DBBAC69E16 /* Pods_Example_iOS_Example_iOSUITests.framework */; };
 		899B2DC88C6511615988B97A /* Pods_Example_macOSFrameworkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB1C11CC0C84C9C6995070E3 /* Pods_Example_macOSFrameworkTests.framework */; };
 		F8605A772415414C0063891C /* Example_macOSFrameworkSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8605A752415414C0063891C /* Example_macOSFrameworkSpec.swift */; };
+		F8605A792415B8EA0063891C /* NimbleCustomPredicateSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8605A782415B8EA0063891C /* NimbleCustomPredicateSpec.swift */; };
+		F8605A7B2415B9420063891C /* AuthResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8605A7A2415B9420063891C /* AuthResult.swift */; };
 		F8AE296B24152A2F007BCC0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AE296A24152A2F007BCC0A /* AppDelegate.swift */; };
 		F8AE296D24152A2F007BCC0A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AE296C24152A2F007BCC0A /* SceneDelegate.swift */; };
 		F8AE296F24152A2F007BCC0A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AE296E24152A2F007BCC0A /* ViewController.swift */; };
@@ -107,6 +109,8 @@
 		D9D1F00911775760696558B5 /* Pods-Example-macOSFramework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example-macOSFramework.debug.xcconfig"; path = "Target Support Files/Pods-Example-macOSFramework/Pods-Example-macOSFramework.debug.xcconfig"; sourceTree = "<group>"; };
 		EF2F741BDDF7420C3E9F5AF0 /* Pods-Example-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example-iOS.debug.xcconfig"; path = "Target Support Files/Pods-Example-iOS/Pods-Example-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		F8605A752415414C0063891C /* Example_macOSFrameworkSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Example_macOSFrameworkSpec.swift; sourceTree = "<group>"; };
+		F8605A782415B8EA0063891C /* NimbleCustomPredicateSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NimbleCustomPredicateSpec.swift; sourceTree = "<group>"; };
+		F8605A7A2415B9420063891C /* AuthResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResult.swift; sourceTree = "<group>"; };
 		F8AE296724152A2F007BCC0A /* Example-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Example-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8AE296A24152A2F007BCC0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8AE296C24152A2F007BCC0A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -259,6 +263,7 @@
 				F8AE297324152A30007BCC0A /* Assets.xcassets */,
 				F8AE297524152A30007BCC0A /* LaunchScreen.storyboard */,
 				F8AE297824152A30007BCC0A /* Info.plist */,
+				F8605A7A2415B9420063891C /* AuthResult.swift */,
 			);
 			path = "Example-iOS";
 			sourceTree = "<group>";
@@ -269,6 +274,7 @@
 				F8AE29C724153DA9007BCC0A /* Example-iOSSpec.swift */,
 				F8AE298124152A30007BCC0A /* Example-iOSTests.swift */,
 				F8AE298324152A30007BCC0A /* Info.plist */,
+				F8605A782415B8EA0063891C /* NimbleCustomPredicateSpec.swift */,
 			);
 			path = "Example-iOSTests";
 			sourceTree = "<group>";
@@ -688,6 +694,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8AE296F24152A2F007BCC0A /* ViewController.swift in Sources */,
+				F8605A7B2415B9420063891C /* AuthResult.swift in Sources */,
 				F8AE296B24152A2F007BCC0A /* AppDelegate.swift in Sources */,
 				F8AE296D24152A2F007BCC0A /* SceneDelegate.swift in Sources */,
 			);
@@ -697,6 +704,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8605A792415B8EA0063891C /* NimbleCustomPredicateSpec.swift in Sources */,
 				F8AE298224152A30007BCC0A /* Example-iOSTests.swift in Sources */,
 				F8AE29C824153DA9007BCC0A /* Example-iOSSpec.swift in Sources */,
 			);

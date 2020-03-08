@@ -104,7 +104,8 @@ it("calculates an average score") { /* closure */ }
 - _One expectation per example._
 
 ^
-"one expectation" is my advice, but I feel very strongly about this
+- "one expectation" is my advice, but I feel very strongly about this.
+- If more than one expectation, each should probably include custom description.
 
 ---
 
@@ -221,7 +222,7 @@ xit("this example is disabled") { code.compiles() == yes }
 ```
 
 - Prefix any Quick function(s) with `x` to disable everything under that scope.
-- Any combination of disabled examples is skipped.
+- Any combination of disabled examples will be skipped.
 
 —--
 
@@ -296,8 +297,26 @@ expect(["Atlantic", "Pacific"]).toNot(contain("Mississippi"))
 
 —--
 
-# Type Handling
+# Type Safety
 
+Nimble
+
+```swift
+it("does not compile") {
+  expect(1 + 1).to(equal("Squee!"))
+  // Cannot convert value of type 'Int' to expected argument type 'String?'
+```
+
+XCTest
+
+```swift
+func testComparingDifferentTypes() throws {
+  XCTAssertEqual("Squee!", 1 + 1)
+  // Cannot convert value of type 'String' to expected argument type 'Int'
+```
+
+^
+- XCTest arguments are 
 
 ---
 
@@ -317,7 +336,8 @@ expect(1 + 1).to(equal(3), description: "Make sure libKindergartenMath is loaded
 XCTest
 
 ```swift
-XCT
+XCTAssertEqual(1 + 1, 3, "Make sure libKindergartenMath is loaded")
+// XCTAssertEqual failed: ("2") is not equal to ("3") - Make sure libKindergartenMath is loaded
 ```
 
 ^
@@ -334,7 +354,24 @@ expect(ocean.isClean).toEventually(beTruthy())
 
 —--
 
-# Custom Matcher
+# ✨ Custom Matcher
+
+```swift
+expect(result).to(beFailure { error in
+  expect(error) == .searchFailed
+})
+
+func beFailure(test: @escaping (MASError) -> Void = { _ in }) -> Predicate<Result<(), MASError>> {
+  return Predicate.define("be <failure>") { expression, message in
+    if let actual = try expression.evaluate(),
+      case let .failure(error) = actual {
+        test(error)
+          return PredicateResult(status: .matches, message: message)
+      }
+      return PredicateResult(status: .fail, message: message)
+  }
+}
+```
 
 ---
 
