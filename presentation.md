@@ -1,5 +1,8 @@
 # Unit Testing with Quick
 
+Presented at [Cocoaheads Denver](https://www.meetup.com/CocoaheadsDenver/)
+on Tuesday 2020-03-10 at Galvanize (Platte)
+
 ---
 
 # BDD
