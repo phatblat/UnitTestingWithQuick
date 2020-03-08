@@ -1,0 +1,19 @@
+#
+# Podfile
+# UnitTestingWithQuick
+#
+
+platform :ios, '13.0'
+
+target 'UnitTestingWithQuick' do
+  use_frameworks!
+
+  target 'UnitTestingWithQuickTests' do
+    inherit! :search_paths
+    pod "Quick"
+    pod "Nimble"
+  end
+
+  target 'UnitTestingWithQuickUITests' do
+  end
+end
