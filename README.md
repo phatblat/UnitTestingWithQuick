@@ -12,6 +12,9 @@ on Tuesday 2020-03-10 at Galvanize (Platte)
 
 ## ⚒️ Example
 
+> I used Xcode 11.4 beta 3 to create this project. It doesn't use any new features
+> that I'm aware of, but I haven't tested it in the current Xcode 11.3.1.
+
 The Xcode project containing example tests lives in the `Example/` folder.
 Note that the `Pods/` folder is ignored and will initially be missing following
 a fresh clone. Run the following commands from the root of this repo to download
