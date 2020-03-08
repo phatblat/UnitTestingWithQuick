@@ -5,12 +5,17 @@ slidenumbers: true
 
 Presented at [Cocoaheads Denver](https://www.meetup.com/CocoaheadsDenver/)
 2020-03-10 at Galvanize
+by @phatblat
+
+![fit](Images/quick_logo.png)
 
 ---
 
-# Slides & Example Project
+# Slides & Examples
 
-[phatblat/UnitTestingWithQuick](https://github.com/phatblat/UnitTestingWithQuick)
+## [phatblat/UnitTestingWithQuick](https://github.com/phatblat/UnitTestingWithQuick)
+
+![](Images/QuickSpec screenshot.png)
 
 ---
 
@@ -36,8 +41,11 @@ Open Source
 - Quick/[Nimble](https://github.com/Quick/Nimble)
   - Matcher framework used to express expectations.
 
-^ Core contributor
-^ BDD style framework
+^
+Quick & Nimble work together
+Core contributor
+BDD style framework
+Both also supports Objective-C
 
 ---
 
@@ -46,13 +54,13 @@ Open Source
 - _Behavior-Driven Development_
 - Don't test code
 - Verify behavior
-- Semi-formal format for behavior specification
+- Semi-formal format for behavior spec
 - Similar to user story
 - Object-oriented design
 
-^ Semi-formal format for behavioral specification which is borrowed from user story specifications from the field of object-oriented analysis and design.
-^ Not full Gherkin syntax
-^ Scenario, Given, When, Then
+^
+Quick is not full Gherkin syntax
+Scenario, Given, When, Then
 
 ---
 
@@ -62,6 +70,52 @@ Open Source
 - "Making TDD Productive and Fun."
 
 ![inline](Images/rspec.png)
+
+^
+BDD-lite
+
+---
+
+# `describe`
+
+```swift
+describe("the thing") { /* closure */ }
+```
+
+- Describes the thing being tested.
+- Groups examples.
+- Serves as a prefix for the actual test name.
+- Analogous to `XCTestCase`
+
+^
+Essentially a suite of tests.
+_Can_ be nested, but don't.
+
+---
+
+# `it`
+
+```swift
+it("calculates an average score") { /* closure */ }
+```
+
+- Describes an example behavior.
+- Contains assertions (expectations).
+- _One expectation per example._
+
+^
+"one expectation" is my advice, but I feel very strongly about this
+
+---
+
+# `context`
+
+```swift
+context("when dark mode is enabled") { /* closure */ }
+```
+
+- Optional alternate 2nd-Nth level of grouping for examples.
+- ✨ Arbitrary nesting. 🎎
 
 ---
 
@@ -91,43 +145,37 @@ class TableOfContentsSpec: QuickSpec {
 
 ---
 
-# `describe`
+# Setup & Teardown
 
 ```swift
-describe("the thing") { /* closure */ }
+
+var dolphin: Dolphin!
+beforeEach { dolphin = Dolphin() }
+afterEach { dolphin = nil }
 ```
 
-- Describes the thing being tested.
-- Groups examples.
-- Serves as a prefix for the actual test name.
-- Analogous to `XCTestCase`
-
-^ Essentially a suite of tests.
+- Declares logic to be run before/after each example.
+- Can be placed inside any/every `describe` and `context`.
 
 ---
 
-# `it`
+# Suite Setup & Teardown
 
 ```swift
-it("calculates an average score") { /* closure */ }
+override func spec() {
+  beforeSuite {
+    OceanDatabase.createDatabase(name: "test.db")
+    OceanDatabase.connectToDatabase(name: "test.db")
+  }
+  afterSuite {
+    OceanDatabase.teardownDatabase(name: "test.db")
+  }
+  describe("a dolphin") {}
 ```
 
-- Describes an example behavior.
-- Contains assertions (expectations).
-- _One expectation per example._
-
-^ "one expectation" is my advice, but I feel very strongly about this
-
----
-
-# `context`
-
-```swift
-context("when dark mode is enabled") { /* closure */ }
-```
-
-- Optional alternate 2nd-Nth level of grouping for examples.
-- Arbitrary nesting. 🎎
+^
+- All beforeSuite/afterSuite closures will be executed before/after all tests are run/finished.
+- No guarantee of ordering for closures execution.
 
 —--
 
@@ -140,8 +188,11 @@ xit("this example is disabled") { code.compiles() == yes }
 - Prefix any example with `x` to disable.
 - `xit`
 
-^ I don't recommend commenting out tests because code won't compile
-^ If you don't want it to compile, delete it
+^
+- Intended to be temporary.
+- Don't forget to undo focus before commit.
+- I don't recommend commenting out tests because code won't compile.
+- If you don't want it to compile, delete it.
 
 —--
 
@@ -150,13 +201,14 @@ xit("this example is disabled") { code.compiles() == yes }
 - Must edit scheme to disable tests.
 - Shows test method as disabled.
 
-Scheme > Test action|Test Navigator
----|---
+| Scheme > Test action | Test Navigator
+| --- | ---
 
 ![inline, fill](Images/disabled_xctest_xcode_scheme.png) ![inline, fill](Images/disabled_xctest_xcode_navigator.png)
 
-^ Test configuration separate from tests.
-^ Had CI not honor test configuration in scheme.
+^
+- Test configuration separate from tests.
+- Had CI not honor test configuration in scheme.
 
 —--
 
@@ -197,24 +249,35 @@ fit("is focused") { expect(example).toRun(true) }
 - Only the focused example(s) will be run.
 - All focused examples will be run.
 
----
-
-# Quick Caveats
-
-- Easy to forget disabled/focused tests.
-- Clicking on Quick example in Test Navigator doesn't navigate to code.
-
-—--
-
-# Xcode UI
+^
+- Intended to be temporary.
+- Don't forget to undo focus before commit.
 
 ---
 
-# Test Name
+# Test Readability
 
-—--
+XCTest
 
-# Type Handling
+```swift
+func testDolphin_click_whenTheDolphinIsNearSomethingInteresting_isEmittedThreeTimes() {
+  // ...
+}
+```
+
+Quick
+
+```swift
+describe("a dolphin") {
+  describe("its click") {
+    context("when the dolphin is near something interesting") {
+      it("is emitted three times") {
+        // ...
+      }
+    }
+  }
+}
+```
 
 —--
 
@@ -231,10 +294,16 @@ expect("seahorse").to(contain("sea"))
 expect(["Atlantic", "Pacific"]).toNot(contain("Mississippi"))
 ```
 
+—--
+
+# Type Handling
+
 
 ---
 
 # Custom Failure Message
+
+Nimble
 
 ```swift
 expect(1 + 1).to(equal(3))
@@ -244,6 +313,16 @@ expect(1 + 1).to(equal(3), description: "Make sure libKindergartenMath is loaded
 // failed - Make sure libKindergartenMath is loaded
 // expected to equal <3>, got <2>
 ```
+
+XCTest
+
+```swift
+XCT
+```
+
+^
+- Don't use `description:` as quick example names are good enough.
+- Especially if you only have one `expect` per example.
 
 —--
 
@@ -264,6 +343,21 @@ expect(ocean.isClean).toEventually(beTruthy())
 ## Properties
 
 ## Local Variables
+
+---
+
+# Quick Caveats
+
+- Easy to forget disabled/focused tests.
+- Clicking on Quick example in Test Navigator doesn't navigate to code.
+- Quick tests don't display in Test Navigator until tests have been run.
+- No support for performance tests.
+- External dependency.
+
+^
+- New tests/examples also won't display until you run tests again.
+- Once tests have been discovered, green/red annotations will show in Xcode editor.
+- Quick and XCTest can be mixed in a project.
 
 ---
 

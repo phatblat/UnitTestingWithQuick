@@ -19,9 +19,13 @@ class Example_iOSTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    // This test is disabled in the Xcode scheme
+    func testExample() throws {    }
+
+    // I prefer to disable tests in code
+    func DISABLED_testBasicArithmatic() throws {
+        XCTAssertEqual(1 + 1, 3)
+        XCTAssertEqual(1 + 1, 3, "Make sure libKindergartenMath is loaded")
     }
 
     func testPerformanceExample() throws {
