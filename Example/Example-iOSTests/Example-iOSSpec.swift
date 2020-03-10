@@ -45,7 +45,7 @@ class Example_iOSSpec: QuickSpec {
                 expect(dog).to(beNil())
                 expect(dog) == nil
             }
-            it("') {
+            it("") {
 
             }
         }

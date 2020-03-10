@@ -90,7 +90,28 @@ Open Source
 
 ^
 - What is BDD?
-- Quick is not full Gherkin/cucumber syntax
+- Quick is not full Gherkin syntax
+
+---
+
+# User Story
+
+[As a](about://blank) store owner,
+[I want](about://blank) to add items back to inventory when they are returned or exchanged,
+[so that](about://blank) I can track inventory.
+
+---
+
+# Gherkin
+
+[Scenario 1:](about://blank) Items returned for refund should be added to inventory.
+[Given](about://blank) that a customer previously bought a black sweater from me
+[and](about://blank) I have three black sweaters in inventory,
+[when](about://blank) they return the black sweater for a refund,
+[then](about://blank) I should have four black sweaters in inventory.
+
+^
+- cucumber
 
 ---
 
