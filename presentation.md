@@ -1,5 +1,19 @@
+theme: Copy of Titillium
 slidenumbers: true
-<!-- footer: @phatblat - [Unit Testing with Quick](https://github.com/phatblat/UnitTestingWithQuick) -->
+slide-transition: fade(0.3)
+
+![right, filtered](Images/Jack_Be_Nimble_2_-_WW_Denslow_-_Project_Gutenberg_etext_18546.jpg)
+
+> Jack be [nimble](about://blank),
+> Jack be [quick](about://blank),
+> Jack jump over
+> The candlestick.
+
+^
+“Jumping over candlesticks” or “Candle-leaping” was traditional in England, mostly practiced in the markets and fairs.
+It was believed that it is a good-luck sign to succeed to clear the candle and to not damp down the flame.
+
+---
 
 # Unit Testing with [Quick](https://github.com/Quick/Quick)
 
@@ -28,7 +42,7 @@ by @phatblat
 - open source: Quick, mas, Objective-Git
 - indie app dev 2008-2009
 
-![fit, right](Images/BChatelain.jpg)
+![right](Images/BChatelain.jpg)
 
 ---
 
@@ -37,7 +51,7 @@ by @phatblat
 Open Source
 
 - Quick/[Quick](https://github.com/Quick/Quick)
-  - Used to define examples.
+  - BDD testing framework, used to define examples.
 - Quick/[Nimble](https://github.com/Quick/Nimble)
   - Matcher framework used to express expectations.
 
@@ -57,10 +71,10 @@ Both also supports Objective-C
 - Semi-formal format for behavior spec
 - Similar to user story
 - Object-oriented design
+- Gherkin: Scenario, Given, When, Then
 
 ^
 Quick is not full Gherkin syntax
-Scenario, Given, When, Then
 
 ---
 
@@ -73,50 +87,6 @@ Scenario, Given, When, Then
 
 ^
 BDD-lite
-
----
-
-# `describe`
-
-```swift
-describe("the thing") { /* closure */ }
-```
-
-- Describes the thing being tested.
-- Groups examples.
-- Serves as a prefix for the actual test name.
-- Analogous to `XCTestCase`
-
-^
-Essentially a suite of tests.
-_Can_ be nested, but don't.
-
----
-
-# `it`
-
-```swift
-it("calculates an average score") { /* closure */ }
-```
-
-- Describes an example behavior.
-- Contains assertions (expectations).
-- _One expectation per example._
-
-^
-- "one expectation" is my advice, but I feel very strongly about this.
-- If more than one expectation, each should probably include custom description.
-
----
-
-# `context`
-
-```swift
-context("when dark mode is enabled") { /* closure */ }
-```
-
-- Optional alternate 2nd-Nth level of grouping for examples.
-- ✨ Arbitrary nesting. 🎎
 
 ---
 
@@ -144,19 +114,78 @@ class TableOfContentsSpec: QuickSpec {
 }
 ```
 
+
+---
+
+# `describe`
+
+```swift
+describe("the thing") { /* closure */ }
+```
+
+- Describes the thing being tested.
+- Groups examples.
+- Serves as a prefix for the actual test name.
+- Analogous to `XCTestCase`
+
+^
+Essentially a suite of tests.
+_Can_ be nested, but don't.
+
+---
+
+# `context`
+
+```swift
+context("when dark mode is enabled") { /* closure */ }
+```
+
+- Optional alternate 2nd-Nth level of grouping for examples.
+- ✨ Arbitrary nesting. 🎎
+
+---
+
+# `it`
+
+```swift
+it("calculates an average score") { /* closure */ }
+```
+
+- Describes an example behavior.
+- Contains assertions (expectations).
+- _One expectation per example._
+
+^
+- "one expectation" is my advice, but I feel very strongly about this.
+- If more than one expectation, each should probably include custom description.
+
 ---
 
 # Setup & Teardown
 
 ```swift
-
 var dolphin: Dolphin!
 beforeEach { dolphin = Dolphin() }
 afterEach { dolphin = nil }
 ```
 
 - Declares logic to be run before/after each example.
-- Can be placed inside any/every `describe` and `context`.
+- ✨ Can be placed inside any/every `describe` and `context`.
+
+---
+
+# ✨ Nesting FTW!
+
+```swift
+describe("dolphin") {
+  beforeEach { dolphin = Dolphin() }
+  context("when out of water") {
+    beforeEach { dolphin.airborne = true }
+    context("and making noise") {
+      beforeEach { dolphin.vocalizationLevel = 5 }
+      it("is loud") { /* closure */ }
+      it("can be heard from 100m away") { /* closure */ }
+```
 
 ---
 
@@ -176,6 +205,7 @@ override func spec() {
 
 ^
 - All beforeSuite/afterSuite closures will be executed before/after all tests are run/finished.
+- spec method is context?
 - No guarantee of ordering for closures execution.
 
 —--
@@ -256,6 +286,8 @@ fit("is focused") { expect(example).toRun(true) }
 
 ---
 
+[.autoscale: false]
+
 # Test Readability
 
 XCTest
@@ -279,6 +311,61 @@ describe("a dolphin") {
   }
 }
 ```
+
+^
+- XCTest name is good practice
+- still constrained to allowed symbols for method name
+- strings more readable with spaces
+
+---
+
+# ✨ Quick Test Names
+
+![inline](Images/dolphin_spec.png)
+
+---
+
+# ✨ More Test Names
+
+![inline](Images/outlet-action-tests-pass.png)
+
+Names are automatically built from describe/context/it descriptions
+
+^
+Obviates need for failure descriptions
+
+---
+
+# Don't Use Properties
+
+```swift
+
+class TableOfContentsSpec: QuickSpec {
+  var dolphin: Dolphin!
+  override func spec() {
+    describe("dolphin") {
+      beforeEach { self.dolphin = Dolphin() }
+```
+
+^
+- Reference to property 'dolphin' in closure requires explicit 'self.' to make capture semantics explicit
+
+---
+
+# Use Local Variables
+
+```swift
+
+class TableOfContentsSpec: QuickSpec {
+  override func spec() {
+    var dolphin: Dolphin!
+    describe("dolphin") {
+      beforeEach { dolphin = Dolphin() }
+```
+
+^
+- style: Use ! liberally in tests
+- there should be only one happy path through the test
 
 —--
 
@@ -375,14 +462,6 @@ func beFailure(test: @escaping (MASError) -> Void = { _ in }) -> Predicate<Resul
 
 ---
 
-# Closures
-
-## Properties
-
-## Local Variables
-
----
-
 # Quick Caveats
 
 - Easy to forget disabled/focused tests.
@@ -408,8 +487,8 @@ func beFailure(test: @escaping (MASError) -> Void = { _ in }) -> Predicate<Resul
 
 ---
 
-> This is an awe-inspiring quote.
-> -- Someone Famous
+> Tests that take too long to run end up not being run.
+> -- [Michael Feathers](https://www.goodreads.com/author/quotes/25201.Michael_C_Feathers)
 
 ---
 

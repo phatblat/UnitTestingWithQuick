@@ -31,7 +31,7 @@ class Example_iOSTests: XCTestCase {
     }
 
     func testComparingDifferentTypes() throws {
-        XCTAssertEqual("Squee!", 1 + 1)
+        //XCTAssertEqual("Squee!", 1 + 1)
     }
 
     func testPerformanceExample() throws {
