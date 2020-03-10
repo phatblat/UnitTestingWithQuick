@@ -23,7 +23,20 @@ by @phatblat
 
 ![fit](Images/quick_logo.png)
 
+^
+- here we are at Cocoaheads
+- I'm your host, phatblat
+- So, we're here to talk about unit testing with quick...
+
 ---
+
+# ... and [Nimble](https://github.com/Quick/Quick)
+
+![fit](Images/quick_logo.png)
+
+---
+
+[.footer: github.com/phatblat/UnitTestingWithQuick]
 
 # Slides & Examples
 
@@ -40,9 +53,11 @@ by @phatblat
 - Kaiser Permanente
 - Manage suite of ~30 iOS & Android libs
 - open source: Quick, mas, Objective-Git
-- indie app dev 2008-2009
 
 ![right](Images/BChatelain.jpg)
+
+^
+- indie app dev 2008-2009
 
 ---
 
@@ -51,15 +66,15 @@ by @phatblat
 Open Source
 
 - Quick/[Quick](https://github.com/Quick/Quick)
-  - BDD testing framework, used to define examples.
+  - BDD-style testing framework, used to define examples.
 - Quick/[Nimble](https://github.com/Quick/Nimble)
   - Matcher framework used to express expectations.
 
 ^
-Quick & Nimble work together
-Core contributor
-BDD style framework
-Both also supports Objective-C
+- Quick & Nimble work together
+- Core contributor
+- BDD style framework
+- Both also support Objective-C
 
 ---
 
@@ -74,7 +89,17 @@ Both also supports Objective-C
 - Gherkin: Scenario, Given, When, Then
 
 ^
-Quick is not full Gherkin syntax
+- What is BDD?
+- Quick is not full Gherkin/cucumber syntax
+
+---
+
+# Quick
+
+![fit](Images/quick_logo.png)
+
+^
+- enough theory, let's talk about Quick
 
 ---
 
@@ -86,7 +111,10 @@ Quick is not full Gherkin syntax
 ![inline](Images/rspec.png)
 
 ^
-BDD-lite
+- but first! Quick was inspired by RSpec
+- Ruby testing framework that inspired Quick & Nimble
+- BDD-lite
+- point out: describe, context, it, and expect
 
 ---
 
@@ -114,7 +142,6 @@ class TableOfContentsSpec: QuickSpec {
 }
 ```
 
-
 ---
 
 # `describe`
@@ -129,8 +156,10 @@ describe("the thing") { /* closure */ }
 - Analogous to `XCTestCase`
 
 ^
-Essentially a suite of tests.
-_Can_ be nested, but don't.
+- noun
+- Somewhat analygous to XCTestCase, but depends how you use it
+- Essentially a suite of tests.
+- _Can_ be nested, but don't.
 
 ---
 
@@ -140,8 +169,12 @@ _Can_ be nested, but don't.
 context("when dark mode is enabled") { /* closure */ }
 ```
 
+- Describes a condition.
 - Optional alternate 2nd-Nth level of grouping for examples.
-- ✨ Arbitrary nesting. 🎎
+
+^
+- starts with "when" or "if"
+- the "when" of gherkin
 
 ---
 
@@ -156,6 +189,7 @@ it("calculates an average score") { /* closure */ }
 - _One expectation per example._
 
 ^
+- starts with a verb like "is"
 - "one expectation" is my advice, but I feel very strongly about this.
 - If more than one expectation, each should probably include custom description.
 
@@ -169,8 +203,12 @@ beforeEach { dolphin = Dolphin() }
 afterEach { dolphin = nil }
 ```
 
-- Declares logic to be run before/after each example.
+- Contains logic to be run before/after each function _in the same scope_.
 - ✨ Can be placed inside any/every `describe` and `context`.
+
+^
+- describe/context/it functions
+- not necessarily before each `it`
 
 ---
 
@@ -210,23 +248,6 @@ override func spec() {
 
 —--
 
-# Disabled Test (Quick)
-
-```swift
-xit("this example is disabled") { code.compiles() == yes }
-```
-
-- Prefix any example with `x` to disable.
-- `xit`
-
-^
-- Intended to be temporary.
-- Don't forget to undo focus before commit.
-- I don't recommend commenting out tests because code won't compile.
-- If you don't want it to compile, delete it.
-
-—--
-
 # Disabled Test (Xcode)
 
 - Must edit scheme to disable tests.
@@ -238,8 +259,27 @@ xit("this example is disabled") { code.compiles() == yes }
 ![inline, fill](Images/disabled_xctest_xcode_scheme.png) ![inline, fill](Images/disabled_xctest_xcode_navigator.png)
 
 ^
-- Test configuration separate from tests.
+- Test configuration separate from tests (in scheme).
 - Had CI not honor test configuration in scheme.
+
+—--
+
+# Disabled Test (Quick)
+
+```swift
+xit("this example is disabled") { code.compiles() == yes }
+```
+
+- Prefix any example with `x` to disable.
+- Controlled in code.
+- Disabled examples do not show in Test Navigator
+
+^
+- Easier to see, more intuitive.
+- Intended to be temporary.
+- Don't forget to undo focus before commit.
+- I don't recommend commenting out tests because code won't compile.
+- If you don't want it to compile, delete it.
 
 —--
 
@@ -252,7 +292,10 @@ xit("this example is disabled") { code.compiles() == yes }
 ```
 
 - Prefix any Quick function(s) with `x` to disable everything under that scope.
-- Any combination of disabled examples will be skipped.
+- Any combination of disabled functions will be skipped.
+
+^
+- functions: describe, context, it
 
 —--
 
@@ -348,6 +391,7 @@ class TableOfContentsSpec: QuickSpec {
 ```
 
 ^
+- without the `self.` you get an error: 
 - Reference to property 'dolphin' in closure requires explicit 'self.' to make capture semantics explicit
 
 ---
@@ -371,16 +415,137 @@ class TableOfContentsSpec: QuickSpec {
 
 # Nimble
 
+^
+- so jack is quick, but is he nimble?
+
+—--
+
+# Nimble
+
 - Matcher framework
 - Swift and Objective-C
+- used to test your `expect`-ations
+
+^
+- quick tour of matchers
+
+---
+
+```swift
+expect(1).to(beAnInstanceOf(Int.self))
+expect("turtle").to(beAnInstanceOf(String.self))
+```
+
+---
+
+# Equality
 
 ```swift
 expect(1 + 1).to(equal(2))
+expect(1 + 1) == 2
+
+expect(1 + 1).toNot(equal(3))
+expect(1 + 1) != 3
+```
+
+^
+- Operator overloading
+
+---
+
+# Decimal Precision
+
+```swift
 expect(1.2).to(beCloseTo(1.1, within: 0.1))
-expect(3) > 2
+expect(1.2) == (1.1, 0.1)
+expect(1.2) ≈ 1.1999
+```
+
+^
+- default delta is 0.0001
+
+---
+
+# Comparison
+
+```swift
+expect(2).to(beLessThan(3))
+expect(2) < 3
+
+expect(3).to(beLessThanOrEqualTo(3))
+expect(3) <= 3
+
+expect(5).to(beGreaterThan(3))
+expect(5) > 3
+
+expect(5).to(beGreaterThanOrEqualTo(5))
+expect(5) >= 5
+```
+
+---
+
+# Nillability
+
+```swift
+var dog: Dog? = nil
+expect(dog).to(beNil())
+expect(dog) == nil
+```
+
+---
+
+# Identity
+
+```swift
+expect(actual).to(beIdenticalTo(expected))
+expect(actual) === expected
+
+expect(actual).toNot(beIdenticalTo(expected))
+expect(actual) !== expected
+```
+
+^
+- same pointer address
+
+---
+
+# String Contents
+
+```swift
 expect("seahorse").to(contain("sea"))
+```
+
+---
+
+# Collection Contents
+
+```swift
 expect(["Atlantic", "Pacific"]).toNot(contain("Mississippi"))
 ```
+
+^
+- `notTo` is an alias of `toNot`
+
+---
+
+# Type Checking
+
+### Type Membership
+
+```swift
+expect(1).to(beAKindOf(Int.self))
+expect("turtle").to(beAKindOf(String.self))
+```
+
+### Exact Type
+
+```swift
+expect(1).to(beAnInstanceOf(Int.self))
+expect("turtle").to(beAnInstanceOf(String.self))
+```
+
+^
+- Nimble supports checking the type membership of any kind of object, whether Objective-C conformant or not
 
 —--
 
@@ -465,6 +630,7 @@ func beFailure(test: @escaping (MASError) -> Void = { _ in }) -> Predicate<Resul
 # Quick Caveats
 
 - Easy to forget disabled/focused tests.
+- Cannot run single example using ✅ or 🛑 in editor gutter.
 - Clicking on Quick example in Test Navigator doesn't navigate to code.
 - Quick tests don't display in Test Navigator until tests have been run.
 - No support for performance tests.
@@ -472,7 +638,7 @@ func beFailure(test: @escaping (MASError) -> Void = { _ in }) -> Predicate<Resul
 
 ^
 - New tests/examples also won't display until you run tests again.
-- Once tests have been discovered, green/red annotations will show in Xcode editor.
+- Once test class has been discovered, green/red annotations will show in Xcode editor at class level.
 - Quick and XCTest can be mixed in a project.
 
 ---
