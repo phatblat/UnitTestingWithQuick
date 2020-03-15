@@ -625,6 +625,23 @@ XCTAssertEqual(1 + 1, 3, "Make sure libKindergartenMath is loaded")
 expect(ocean.isClean).toEventually(beTruthy())
 ```
 
+---
+
+# Async Test
+
+```swift
+waitUntil { done in
+    service.authenticate(with: credentials) { result in
+        expect(result).to(beSuccess { session in
+            expect(session).toNot(beNil())
+            expect(session.token) == "session token"
+            expect(session.user).toNot(beNil())
+        })
+        done()
+    }
+}
+```
+
 —--
 
 # ✨ Custom Matcher
