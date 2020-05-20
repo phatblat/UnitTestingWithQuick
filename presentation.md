@@ -452,13 +452,6 @@ class TableOfContentsSpec: QuickSpec {
 
 ---
 
-```swift
-expect(1).to(beAnInstanceOf(Int.self))
-expect("turtle").to(beAnInstanceOf(String.self))
-```
-
----
-
 # Equality
 
 ```swift
