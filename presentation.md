@@ -2,31 +2,14 @@ theme: Copy of Titillium
 slidenumbers: true
 slide-transition: fade(0.3)
 
-![right, filtered](Images/Jack_Be_Nimble_2_-_WW_Denslow_-_Project_Gutenberg_etext_18546.jpg)
-
-> Jack be [nimble](about://blank),
-> Jack be [quick](about://blank),
-> Jack jump over
-> The candlestick.
-
-^
-“Jumping over candlesticks” or “Candle-leaping” was traditional in England, mostly practiced in the markets and fairs.
-It was believed that it is a good-luck sign to succeed to clear the candle and to not damp down the flame.
-
----
-
 # Unit Testing with [Quick](https://github.com/Quick/Quick)
 
-Presented at [Cocoaheads Denver](https://www.meetup.com/CocoaheadsDenver/)
-2020-03-10 at Galvanize
+Presented at [360|iDev 2020](https://360idev.com/sessions/unit-testing-with-quick-and-nimble/)
 by @phatblat
 
 ![fit](Images/quick_logo.png)
 
 ^
-- here we are at Cocoaheads
-- I'm your host, phatblat
-- So, we're here to talk about unit testing with quick...
 
 ---
 
