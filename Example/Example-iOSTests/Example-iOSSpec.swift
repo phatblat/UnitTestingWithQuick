@@ -14,7 +14,7 @@ struct Dog {}
 
 class Example_iOSSpec: QuickSpec {
     override func spec() {
-        describe("basic addition") {
+        describe("basic arithmatic") {
             xit("to equal three") {
                 expect(1 + 1).to(equal(3))
                 // failed - expected to equal <3>, got <2>
@@ -43,10 +43,6 @@ class Example_iOSSpec: QuickSpec {
             it("is nil") {
                 let dog: Dog? = nil
                 expect(dog).to(beNil())
-                expect(dog) == nil
-            }
-            it("") {
-
             }
         }
     }
