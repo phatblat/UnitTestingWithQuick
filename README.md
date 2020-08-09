@@ -1,6 +1,10 @@
-# Unit Testing with Quick
+# Unit Testing with Quick (and Nimble)
 
-Presented at [Cocoaheads Denver](https://www.meetup.com/CocoaheadsDenver/)
+- Presented at [360|iDev 2020](https://360idev.com/sessions/unit-testing-with-quick-and-nimble/)
+on Monday 2020-08-17
+- Presented at Mobile Developer Community of Practice,
+an internal virtual gathering at Kaiser Permanente, on 2020-05
+- Presented at [Cocoaheads Denver](https://www.meetup.com/CocoaheadsDenver/)
 on Tuesday 2020-03-10 at Galvanize (Platte)
 
 ## 🗞 Contents
@@ -11,9 +15,6 @@ on Tuesday 2020-03-10 at Galvanize (Platte)
   - Presented using [Deckset](https://www.deckset.com/)
 
 ## ⚒️ Example
-
-> I used Xcode 11.4 beta 3 to create this project. It doesn't use any new features
-> that I'm aware of, but I haven't tested it in the current Xcode 11.3.1.
 
 The Xcode project containing example tests lives in the `Example/` folder.
 Note that the `Pods/` folder is ignored and will initially be missing following
