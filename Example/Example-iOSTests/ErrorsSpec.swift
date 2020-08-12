@@ -23,7 +23,7 @@ class ErrorsSpec: QuickSpec {
     override func spec() {
         describe("a dolphin") {
             // New in Quick 3
-            it("fails when an error is thrown") {
+            xit("fails when an error is thrown") {
                 try throwingFunc()
             }
         }

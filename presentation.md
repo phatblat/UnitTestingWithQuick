@@ -29,6 +29,10 @@ by @phatblat
 
 ---
 
+# testAsyncNetworkCallUpdatesLabelWithGreenCheckEmoji()
+
+---
+
 # @[phatblat](https://twitter.com/phatblat)
 
 - Ben Chatelain
@@ -40,6 +44,7 @@ by @phatblat
 ![right](Images/BChatelain.jpg)
 
 ^
+- photo by Fuad Kamal at 2018 360|iDev
 - indie app dev 2008-2009
 
 ---
@@ -66,14 +71,14 @@ Open Source
 - _Behavior-Driven Development_
 - Don't test code
 - Verify behavior
-- Semi-formal format for behavior spec
-- Similar to user story
 - Object-oriented design
+- Similar to user story
+- Behavior spec: semi-formal format
 - Gherkin: Scenario, Given, When, Then
 
 ^
 - What is BDD?
-- Quick is not full Gherkin syntax
+- Nouns and verbs
 
 ---
 
@@ -83,11 +88,14 @@ Open Source
 [I want](about://blank) to add items back to inventory when they are returned or exchanged,
 [so that](about://blank) I can track inventory.
 
+^
+- Answers the who, what and why?
+
 ---
 
 # Gherkin
 
-[Scenario 1:](about://blank) Items returned for refund should be added to inventory.
+[Scenario:](about://blank) Items returned for refund should be added to inventory.
 [Given](about://blank) that a customer previously bought a black sweater from me
 [and](about://blank) I have three black sweaters in inventory,
 [when](about://blank) they return the black sweater for a refund,
@@ -98,12 +106,17 @@ Open Source
 
 ---
 
-# Quick
+# Spec
 
 ![fit](Images/quick_logo.png)
 
+[describe](about://blank) inventory
+[context](about://blank) an item is returned
+[it](about://blank) will increment the item count
+[expect](about://blank) count is 4
+
 ^
-- enough theory, let's talk about Quick
+- pseudocode for spec test
 
 ---
 
@@ -657,13 +670,46 @@ func beFailure(test: @escaping (MASError) -> Void = { _ in }) -> Predicate<Resul
 
 ---
 
-# iOS Examples
+# Demo! 💥
 
 ---
 
-# macOS Examples
+# testAsyncNetworkCallUpdatesLabelWithGreenCheckEmoji()
+
+^
+- so the next time you are updating a test like this
 
 ---
+
+# 👌🏻
+
+```swift
+describe("a label") {
+  context("after network call") {
+    it("shows a green check emoji") {
+      expect(label.title) == "✅"
+    }
+  }
+}
+```
+
+^
+- Remember that there is a better way...
+
+---
+
+# iOS Unit Testing by Example
+
+by Jon Reid
+[qualitycoding.org](https://qualitycoding.org)
+
+
+[https://pragprog.com/titles/jrlegios/](https://pragprog.com/titles/jrlegios/)
+
+![iOS Book, fit](Images/jrlegios-750.jpg)
+
+^
+- Pragmatic Bookshelf
 
 ---
 
@@ -683,10 +729,17 @@ func beFailure(test: @escaping (MASError) -> Void = { _ in }) -> Predicate<Resul
 - Jon Reid
   - [Quality Coding](https://qualitycoding.org/)
   - [iOS Unit Testing By Example](https://pragprog.com/book/jrlegios/ios-unit-testing-by-example) 📕
+
+---
+
+# References 2
+
+![Matrix background](Images/matrix.png)
+
 - [BDD](https://en.wikipedia.org/wiki/Behavior-driven_development)
 - Inspirations
   - [RSpec](https://rspec.info/) for Ruby
   - [Specta](https://github.com/specta/specta) for Objective-C
-  - [Ginkgo](https://github.com/onsi/ginkgo) for Go
   - [Cedar](https://github.com/pivotal/cedar) for Objective-C
 - [Deckset app](https://www.deckset.com/)
+- [mmhmm app](https://www.mmhmm.app/)
