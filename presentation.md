@@ -13,7 +13,7 @@ by @phatblat
 
 ---
 
-# ... and [Nimble](https://github.com/Quick/Quick)
+# ... and [Nimble](https://github.com/Quick/Nimble)
 
 ![fit](Images/quick_logo.png)
 
