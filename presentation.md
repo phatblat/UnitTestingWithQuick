@@ -29,7 +29,14 @@ by @phatblat
 
 ---
 
-# testAsyncNetworkCallUpdatesLabelWithGreenCheckEmoji()
+# Agenda
+
+- BDD
+- Quick Syntax
+- Nimble Syntax
+- XCTest Comparisons
+  - ✨Only in Quick
+- Best Practices
 
 ---
 
@@ -46,6 +53,10 @@ by @phatblat
 ^
 - photo by Fuad Kamal at 2018 360|iDev
 - indie app dev 2008-2009
+
+---
+
+# testAsyncNetworkCallUpdatesLabelWithGreenCheckEmoji()
 
 ---
 
