@@ -267,13 +267,23 @@ override func spec() {
 
 # Disabled Test (Xcode)
 
-- Must edit scheme to disable tests.
-- Shows test method as disabled.
+## Test Navigator
 
-| Scheme > Test action | Test Navigator
-| --- | ---
+- Enable/disable using righ-click context menu.
+- Actually updates current scheme file.
 
-![inline, fill](Images/disabled_xctest_xcode_scheme.png) ![inline, fill](Images/disabled_xctest_xcode_navigator.png)
+![inline](Images/disabled_xctest_xcode_navigator.png)
+
+—--
+
+# Disabled Test (Xcode 2)
+
+## Scheme Editor
+
+- Edit scheme to enable/disable tests.
+
+
+![inline](Images/disabled_xctest_xcode_scheme.png)
 
 ^
 - Test configuration separate from tests (in scheme).
