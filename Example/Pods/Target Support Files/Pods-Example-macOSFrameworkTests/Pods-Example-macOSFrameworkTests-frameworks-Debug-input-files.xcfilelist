@@ -1,0 +1,3 @@
+${PODS_ROOT}/Target Support Files/Pods-Example-macOSFrameworkTests/Pods-Example-macOSFrameworkTests-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Nimble-macOS/Nimble.framework
+${BUILT_PRODUCTS_DIR}/Quick-macOS/Quick.framework

@@ -11,8 +11,7 @@
 .settings
 .vscode/
 Carthage/
-Pods/
+# Pods/
 bin/
 build/
-gradlew.bat
 xcuserdata

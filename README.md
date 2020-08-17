@@ -17,15 +17,11 @@ on Tuesday 2020-03-10 at Galvanize (Platte)
 ## ⚒️ Example
 
 The Xcode project containing example tests lives in the `Example/` folder.
-Note that the `Pods/` folder is ignored and will initially be missing following
-a fresh clone. Run the following commands from the root of this repo to download
-dependencies and generate the required Pods project:
+Note that this project uses CocoaPods, so you'll want to open the `xcworkspace` file,
+**not** the `xcodeproj` file.
 
 ```bash
-bundle install
-cd Example/
-bundle exec pod install
-open *.xcworkspace
+open Example/UnitTestingWithQuick.xcworkspace
 ```
 
 ## 📄 License
