@@ -10,7 +10,7 @@ on Tuesday 2020-03-10 at Galvanize (Platte)
 ## 🗞 Contents
 
 - [Example Xcode Project](Example/)
-- Presentation Slides (PDF)
+- [Presentation Slides (PDF)](https://github.com/phatblat/UnitTestingWithQuick/blob/master/presentation.pdf)
 - [Presentation Source (Markdown)](presentation.md)
   - Presented using [Deckset](https://www.deckset.com/)
 
